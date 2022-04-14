@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>ids</title>
+  </head>
+  <body class="text-center">
+    <section id="app">
+        <div v-for="(person, index) in persons" class="d-inline me-4">
+            <div class="border d-inline-block p-4 shadow rounded mt-5">
+                <img v-bind:src='person.src' class="rounded-circle border border-primary border-4 " alt="" >
+                <h5>{{person.names}}</h5>
+                <p class="d-inline-block bg-primary">{{person.email}}</p>
+                <h2>{{index+1}}</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="facebook">
+        <div v-for="(person, index) in persons" class="d-inline me-4">
+          
+                <div class="card">
+                <!-- head-section -->
+            <div class="d-flex justify-content-between align-items-center">              
+              <div>
+              <div class="d-inline-block rounded-circle border border-primary border-5">
+                <img src="${profile.picture.medium}" alt="" class="rounded-circle profile_picture">
+              
+            </div>    
+                  <div class="d-inline-block">
+                  <h5 class="name">{{profile.name.first}} ${{profile.name.last}}</h5>
+                  <p class="text-muted"><span>4day</span> <i class="fa-solid fa-earth-africa"></i></p>
+                  </div>
+              </div>    
+              <div class="align-self-center"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+        
+          </div>
+          <!-- body-section -->
+          <section>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab debitis nam facilis harum quae eos, quaerat repellendus ipsum eaque sunt quam, ducimus pariatur facere laborum perspiciatis excepturi hic necessitatibus iste perferendis maxime. Repellat itaque, placeat saepe quas quis ea officiis?</p>
+          </section>
+        
+          <!-- image-section -->
+          <img v-bind:src='profile.picture.large' class="postPicture" alt="">
+        
+          <!-- like and comments images section -->
+          <div class="d-flex justify-content-between">
+            <div>
+              <i class="fa-solid fa-thumbs-up text-white bg-primary rounded-circle p-2"></i>
+              <i class="fa-solid fa-heart text-white bg-danger rounded-circle p-2 marginForThumbsup border border-4 border-light"></i>
+              <span class="numbersOfThumbsup">0</span>
+            </div>
+            <div class="align-self-center"><span>85</span><span> comments</span></div>
+          </div>
+          <hr>
+        
+          <div class="d-flex container justify-content-between">
+            <div><i class="fa-regular fa-thumbs-up thumbsUp1"></i><span class="numbersOfThumbsup">0</span></div>
+            <div><i class="fa-regular fa-message"></i><span class="comments"> Comments</span></div>
+            <div><i class="fa-solid fa-share"></i><span> share</span></div>
+          </div>
+            <div class="d-none commentSection">
+            <div class="postedComments ms-2 my-1"></div>
+            <div class="input-group my-2">      
+              <input type="text" class="form-control border-0 bg-light inputComment" placeholder="write comment here">
+              <button class="btn btn-light commentBtn" type="button" id="button-addon2"><i class="fa-solid fa-paper-plane text-secondary"></i></button>
+            </div>
+            </div>
+          
+          <hr>
+          
+              </div>
+        
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>  
+    <script src="index.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
